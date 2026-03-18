@@ -3,51 +3,208 @@
 <head>
 <title>Guitar Guy</title>
 <style>
-body{
-  font-family: Arial;
-  background:#0f172a;
-  color:white;
-  text-align:center;
-  padding:60px;
-}
-.container{
-  max-width:600px;
-  margin:auto;
-}
-input{
-  padding:12px;
-  width:70%;
-  margin-top:20px;
-  border-radius:6px;
-  border:none;
-}
-button{
-  padding:12px 20px;
-  background:#22c55e;
-  border:none;
-  border-radius:6px;
-  color:white;
-  cursor:pointer;
-  margin-top:10px;
-}
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+
+  .container {
+    max-width: 780px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 52px;
+    margin-bottom: 10px;
+  }
+
+  .brand {
+    font-size: 42px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+  }
+
+  .hook {
+    font-size: 22px;
+    font-weight: bold;
+    color: #f8fafc;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .hook span {
+    color: #22c55e;
+  }
+
+  .subtext {
+    font-size: 17px;
+    color: #94a3b8;
+    line-height: 1.7;
+    margin-bottom: 32px;
+  }
+
+  .features {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+  }
+
+  .feature {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    padding: 18px 22px;
+    width: 220px;
+    text-align: left;
+  }
+
+  .feature-icon {
+    font-size: 26px;
+    margin-bottom: 8px;
+  }
+
+  .feature-title {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #f1f5f9;
+  }
+
+  .feature-desc {
+    font-size: 13px;
+    color: #94a3b8;
+    line-height: 1.5;
+  }
+
+  .cta-label {
+    font-size: 16px;
+    color: #cbd5e1;
+    margin-bottom: 14px;
+  }
+
+  .input-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  input[type="email"] {
+    padding: 14px 18px;
+    width: 320px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    background: #1e293b;
+    color: white;
+    font-size: 15px;
+    outline: none;
+  }
+
+  input[type="email"]::placeholder {
+    color: #64748b;
+  }
+
+  input[type="email"]:focus {
+    border-color: #22c55e;
+  }
+
+  button {
+    padding: 14px 28px;
+    background: #22c55e;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  button:hover {
+    background: #16a34a;
+  }
+
+  #message {
+    margin-top: 18px;
+    font-size: 15px;
+    min-height: 24px;
+  }
+
+  .badge {
+    display: inline-block;
+    background: #1e293b;
+    border: 1px solid #22c55e;
+    color: #22c55e;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
 </style>
 </head>
 <body>
 <div class="container">
-  <h1>🎸 Guitar Guy</h1>
-  <h2>Learn Guitar Theory The Right Way</h2>
-  <p>
-    I'm building a tool that helps guitar players master
-    the fretboard, triads, and music theory faster.
-  </p>
-  <p>
-    Enter your email to get notified when Guitar Guy launches.
+
+  <div class="logo">🎸</div>
+  <div class="brand">Guitar Guy</div>
+
+  <div class="badge">Coming Soon — Join the Waitlist</div>
+
+  <div class="hook">
+    You've been playing for years,<br>
+    but your solos still sound like the <span>same 5 licks</span><br>
+    and music theory feels like a foreign language.
+  </div>
+
+  <p class="subtext">
+    Guitar Guy is built for the intermediate player who's stuck — the one who can play songs
+    but can't <em>create</em> them. We're building an AI-powered platform with structured courses
+    that finally explain the fretboard, chord theory, and musical thinking in a way that
+    actually makes sense for guitarists.
   </p>
 
-  <input type="email" id="emailInput" placeholder="Your email" required>
-  <br>
-  <button onclick="submitEmail()">Notify Me</button>
-  <p id="message" style="margin-top:20px;"></p>
+  <div class="features">
+    <div class="feature">
+      <div class="feature-icon">🤖</div>
+      <div class="feature-title">AI-Powered Learning</div>
+      <div class="feature-desc">Get personalized feedback and answers to your theory questions instantly.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🎓</div>
+      <div class="feature-title">Structured Courses</div>
+      <div class="feature-desc">Step-by-step paths from stuck intermediate to confident, creative player.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🎵</div>
+      <div class="feature-title">Fretboard Mastery</div>
+      <div class="feature-desc">Triads, modes, chord extensions — finally explained the guitarist's way.</div>
+    </div>
+  </div>
+
+  <p class="cta-label">Be the first to know when we launch 👇</p>
+
+  <div class="input-row">
+    <input type="email" id="emailInput" placeholder="Enter your email" />
+    <button onclick="submitEmail()">Notify Me</button>
+  </div>
+
+  <p id="message"></p>
+
 </div>
 
 <script>
@@ -56,6 +213,7 @@ async function submitEmail() {
   const msg = document.getElementById('message');
 
   if (!email) {
+    msg.style.color = '#f87171';
     msg.textContent = 'Please enter your email.';
     return;
   }
@@ -69,7 +227,7 @@ async function submitEmail() {
 
     if (response.ok) {
       msg.style.color = '#22c55e';
-      msg.textContent = "You're on the list! We'll notify you when Guitar Guy launches.";
+      msg.textContent = "You're on the list! We'll let you know the moment Guitar Guy launches.";
       document.getElementById('emailInput').value = '';
     } else {
       msg.style.color = '#f87171';
